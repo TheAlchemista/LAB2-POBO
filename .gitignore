@@ -1,0 +1,4 @@
+.vscode/
+depreciated/
+__pycache__
+test.py
