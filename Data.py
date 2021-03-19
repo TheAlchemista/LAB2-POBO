@@ -12,12 +12,12 @@ class Data:
     self.hf = hf
     # name, duration, depends_on, workers, start, end, initialised
     self.tasks = [
-      dict(name = "A", duration = 3, depends_on = [],            workers = 2, start = 0, end = 0, NWR = 0, NWZ = 0, NPR = 0, NPZ = 0, initialised = False),
+      dict(name = "A", duration = 3, depends_on = [],            workers = 1, start = 0, end = 0, NWR = 0, NWZ = 0, NPR = 0, NPZ = 0, initialised = False),
       dict(name = "B", duration = 5,  depends_on = [],           workers = 3, start = 0, end = 0, NWR = 0, NWZ = 0, NPR = 0, NPZ = 0, initialised = False),
       dict(name = "C", duration = 10, depends_on = ["B"],        workers = 2, start = 0, end = 0, NWR = 0, NWZ = 0, NPR = 0, NPZ = 0, initialised = False),
-      dict(name = "D", duration = 10,  depends_on = ["A"],       workers = 2, start = 0, end = 0, NWR = 0, NWZ = 0, NPR = 0, NPZ = 0, initialised = False),
-      dict(name = "E", duration = 21,  depends_on = ["A", "B"],  workers = 4, start = 0, end = 0, NWR = 0, NWZ = 0, NPR = 0, NPZ = 0, initialised = False),
-      dict(name = "F", duration = 12,  depends_on = ["C", "D"],  workers = 2, start = 0, end = 0, NWR = 0, NWZ = 0, NPR = 0, NPZ = 0, initialised = False)
+      dict(name = "D", duration = 3,  depends_on = ["A"],       workers = 2, start = 0, end = 0, NWR = 0, NWZ = 0, NPR = 0, NPZ = 0, initialised = False),
+      dict(name = "E", duration = 15,  depends_on = ["A", "B"],  workers = 3, start = 0, end = 0, NWR = 0, NWZ = 0, NPR = 0, NPZ = 0, initialised = False),
+      dict(name = "F", duration = 10,  depends_on = ["C", "D"],  workers = 2, start = 0, end = 0, NWR = 0, NWZ = 0, NPR = 0, NPZ = 0, initialised = False)
     ]
     self.cal_start()
     self.cal_end()
