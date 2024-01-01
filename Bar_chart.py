@@ -15,7 +15,9 @@ class Bar_chart:
     plt.xticks(self.pbc.x_axis_coordinates, self.pbc.x_axis_coordinates)
 
     self.annotate(bar_graph)
-    plt.title("Liczba pracowników w określonych momentach.")
+    # plt.title("Liczba pracowników w określonych momentach.")
+    plt.ylabel("Liczba pracowników")
+    plt.xlabel("Czas")
     plt.show(block=False)
     # plt.show()
 

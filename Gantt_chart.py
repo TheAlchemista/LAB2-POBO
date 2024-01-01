@@ -29,7 +29,11 @@ class Gantt_chart:
 
   def figure(self):
     df = self.prepare_data()
-    fig = px.timeline(df, x_start="start", x_end="end", y="name", color="name")
+    fig = px.timeline(df, x_start="start", x_end="end", y="name", color="name",
+        labels = {
+            "name": "Operacje"
+        })
+    fig.update_layout(xaxis_title="Czas") #to add a title to xaxis
     fig.update_yaxes(autorange="reversed") # otherwise tasks are listed from the bottom up
     num_tick_labels = self.get_labels()
     date_ticks = self.get_tics(num_tick_labels)
